@@ -3,7 +3,6 @@
 This directory contains development tools and utilities for testing, updating, and publishing Seanime online streaming extensions.
 
 * **Universal Test Runner** (`test-runner.ts`): Designed specifically to test Seanime online streaming extensions locally before deploying them. It accurately mimics Seanime's internal Go engine and uses Seanime's proxy API to test playability.
-* **Manifest Utilities** (`update-manifest.sh` & `update-all-manifests.sh`): Script utilities to package the TypeScript payload of extensions into their corresponding `manifest.json`.
 * **Marketplace Generator** (`generate-marketplace.ts`): Automatically scans the `online-streaming/` directory to build a consolidated marketplace JSON file (`TropicalFrog's-marketplace/main.json`).
 
 ## ⚠️ Prerequisites
@@ -34,18 +33,7 @@ Or from the `_scripts` directory:
 npx tsx test-runner.ts <extension-folder-name> [query] [episode] [server]
 ```
 
-### 2. Update Manifests
-To update a single manifest:
-```bash
-_scripts/update-manifest.sh <extension-folder-name>
-```
-
-To update all manifests:
-```bash
-_scripts/update-all-manifests.sh
-```
-
-### 3. Generate Marketplace
+### 2. Generate Marketplace
 To compile all extension manifests in `online-streaming/` and generate a consolidated marketplace JSON file (`TropicalFrog's-marketplace/main.json`):
 
 Run from the `online-streaming` directory:
